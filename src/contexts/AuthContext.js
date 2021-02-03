@@ -19,14 +19,14 @@ export const AuthProvider = ({ children }) => {
     const updateEmail    = (email) => currentUser.updateEmail(email);
     const updatePassword = (password) => currentUser.updatePassword(password);
 
-    // useEffect(() => {
-    //     const unsubscribe = auth.onAuthStateChanged(user => {
-    //         setCurrentUser(user);
-    //         setLoading(false);
-    //     });
+    useEffect(() => {
+        const unsubscribe = auth.onAuthStateChanged(user => {
+            setCurrentUser(user);
+            setLoading(false);
+        });
 
-    //     return unsubscribe;
-    // }, []);
+        return unsubscribe;
+    }, []);
 
     const value = {
         currentUser,
