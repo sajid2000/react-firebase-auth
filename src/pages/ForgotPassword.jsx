@@ -9,7 +9,7 @@ export default function ForgotPassword() {
     const [message, setMessage] = useState('');
     const [loading, setLoading] = useState(false);
 
-    const emailRef    = useRef();
+    const emailRef = useRef();
 
     const { resetPassword } = useAuth();
 

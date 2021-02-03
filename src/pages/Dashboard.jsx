@@ -7,12 +7,12 @@ import { useAuth } from '../contexts/AuthContext';
 export default function Dashboard() {
     const [error, setError] = useState('');
 
-    const { currentUser } = useAuth();
+    const { currentUser, logout } = useAuth();
 
     const handleLogout = (e) => {
         e.preventDefault();
 
-        //
+        logout();
     };
 
     return (
