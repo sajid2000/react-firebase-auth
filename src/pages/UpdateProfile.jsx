@@ -7,7 +7,6 @@ import { useAuth } from '../contexts/AuthContext';
 export default function UpdateProfile() {
     const history = useHistory();
     const [error, setError]     = useState('');
-    const [message, setMessage] = useState('');
     const [loading, setLoading] = useState(false);
 
     const emailRef           = useRef();
@@ -49,7 +48,6 @@ export default function UpdateProfile() {
                 <Card.Body>
                     <h2 className="text-center mb-4">Update Profile</h2>
                     {error && <Alert variant="danger">{error}</Alert>}
-                    {message && <Alert variant="success">{message}</Alert>}
                     <Form onSubmit={handleSubmit}>
                         <Form.Group id="email">
                             <Form.Label>Email</Form.Label>
